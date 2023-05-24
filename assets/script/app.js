@@ -15,8 +15,8 @@ const applayTheme = (themeName,init=false) => {
     const theme=themes[themeName];
     const themeLink = document.getElementById("cssThemeLink");
     const iconLink = document.getElementById("dzIcon");
-    themeLink.setAttribute("href", `/assets/style/${theme.name}.css`);    
-    iconLink.setAttribute("src", `/assets/images/${theme.icon}`);
+    themeLink.setAttribute("href", `assets/style/${theme.name}.css`);    
+    iconLink.setAttribute("src", `assets/images/${theme.icon}`);
     localStorage.setItem("dz_active_theme", themeName);
     const classToToggle=(init&& themeName == DEFAULT_THEME) ?'':'dark-layout'
     if(classToToggle){
