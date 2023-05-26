@@ -46,6 +46,82 @@
     --dz-font-medium: 500;
     --dz-font-semi-bold: 600;
     --z-fixed: 99999;
+
+
+
+
+
+    /* light theme */
+    --dz-sidebar-bg-color-light: rgb(245 245 245);
+    --dz-sidebar-bg-color: #fff;
+    --dz-sidebar-bg-color-dark: #e0e0ee;
+
+    --dz-sidebar-text-color-light: #666666;
+    --dz-sidebar-text-color-lighter: #999999;
+    --dz-sidebar-text-color: #6e768e;
+    --dz-sidebar-text-highlight: #71b6f9;
+
+
+    --dz-sidebar-icon-color: #333333;
+    --dz-sidebar-icon-highlight: #71b6f9;
+
+    --dz-container-color: #f0f0f5;
+    --dz-card-color: #fff;
+    --dz-body-color: #f5f5f5;
+    --dz-body-color-dark: #fff;
+
+    --dz-input-bg: var(--dz-body-color-dark);
+    --dz-input-focus-bg: var(--dz-input-bg);
+    --dz-input-border-color: var(--dz-border-color);
+    --dz-input-focus-border-color: var(--dz-border-color-active);
+    --dz-input-hover-bg: #fff;
+
+    /* JS Grid */
+    --dz-table-row-color: #f2f2f2;
+    --dz-table-row-alt-color: #fff;
+    --dz-table-border-color: var(--dz-border-color);
+
+
+    /* Bootstrap Select  */
+    --dz-select--hover-bg-color:#f0f0f5;
+    --dz-select--active-bg-color:#71b6f9;
+
+}
+
+body.dark-layout{
+        /* dark theme */
+        --dz-sidebar-bg-color-light:#3A3F48;
+        --dz-sidebar-bg-color:#31353d;
+        --dz-sidebar-bg-color-dark:rgba(0, 0, 0, 0.09);
+        
+        --dz-sidebar-text-color-lighter: #A5A1AA;
+        --dz-sidebar-text-color-light:#74829c;
+        --dz-sidebar-text-color:#818896;
+        --dz-sidebar-text-highlight:#fff;
+    
+        --dz-sidebar-icon-color: #818896;
+        --dz-sidebar-icon-highlight: #fff;    
+        
+        --dz-container-color: #eef0f8;
+    
+        --dz-card-color: #31353d;
+        --dz-body-color: #2c3036;
+        --dz-body-color-dark: #31353d;
+    
+        --dz-input-bg: #383c44;
+        --dz-input-focus-bg: #363e4b;
+        --dz-input-border-color: #424c5c;
+        --dz-input-focus-border-color: #545f73;
+    
+        /* JS Grid */
+        --dz-table-row-color: #31353d;
+        --dz-table-row-alt-color: #363b42;
+        --dz-table-border-color:#424c5c;
+    
+        /* Bootstrap Select  */
+        --dz-select-bg-color: var(--dz-input-bg);
+        --dz-select--hover-bg-color:#363e4b;
+        --dz-select--active-bg-color:#31353d;
 }
 
 body {
@@ -122,6 +198,7 @@ main h1 {
 
 .sidebar-top .logo {
     width: 3rem;
+    min-height: 48px;
     margin: 0 0.8rem;
 }
 

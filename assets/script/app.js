@@ -10,24 +10,23 @@ const themes = {
 const DEFAULT_THEME="dark";
 
 const applayTheme = (themeName,init=false) => {
-    console.debug("Active theme: "+themeName);
-    themeName=themeName ||DEFAULT_THEME;
+    console.log("Active theme: "+themeName);
     const theme=themes[themeName];
-    const themeLink = document.getElementById("cssThemeLink");
     const iconLink = document.getElementById("dzIcon");
-    themeLink.setAttribute("href", `assets/style/${theme.name}.css`);    
     iconLink.setAttribute("src", `assets/images/${theme.icon}`);
     localStorage.setItem("dz_active_theme", themeName);
-    const classToToggle=(init&& themeName == DEFAULT_THEME) ?'':'dark-layout'
-    if(classToToggle){
-        theme_selector.classList.toggle(classToToggle)
-    }    
+    const classToToggle=(init && themeName == DEFAULT_THEME) ?'':'dark-layout'
+    theme_selector.classList.toggle(classToToggle);
+    document.body.classList.toggle('dark-layout');
     document.querySelector("#theme-selector i").className=theme.selectorIcon;    
 
 }
 const initTheme = () => {
-    const activeThemeT=localStorage.getItem("dz_active_theme");       
-    applayTheme(activeThemeT,true);       
+    const activeThemeT=localStorage.getItem("dz_active_theme") || DEFAULT_THEME;    
+    if(activeThemeT != DEFAULT_THEME)   
+    {
+        applayTheme(activeThemeT,true);       
+    }
 }
 
 initTheme();
