@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  /*========== Font and typography ==========*/
+  --dz-body-font: Karla, sans-serif;
+
+  --dz-body-color: #2c3036;
+  --dz-card-color: #31353d;
+  --dz-input-bg-color: #383c44;
+  --dz-input-bg-focus-color: #363e4b;
+  --dz-input-border-color: #424c5c;
+  --dz-input-border-focus-color: #545f73;
+  --dz-input-text-color: var(--dz-text-color);
+  --dz-input-text-focus-color: var(--dz-text-color-light);
+
+  --dz-text-color: #818896;
+  --dz-text-color-light: #A5A1AA;
+  --dz-text-color-dark: #6c757d;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--dz-body-font);
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: var(--dz-body-color);
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+}
+
+.card {
+    border: none;
+    border-top: 5px solid rgb(131 131 131);
+    background: var(--dz-card-color);
+    color: #818896;
+}
+
+.form-control {
+    border: 0px solid var(--dz-input-border-color) !important;
+    background: var(--dz-input-bg-color);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    border-radius: 0.2rem;
+    box-shadow: none;
+    transition: all 0.1s ease-in-out;    
+    color: var(--dz-input-text-color);
+}
+
+.form-control:focus {
+  border: 0px solid var(--dz-input-border-focus-color) !important;
+  box-shadow: 0 0 0 0 rgba(27, 197, 189, 0.25) !important;
+  border-color: var(--dz-input-border-focus-color) !important;
+  background: var(--dz-input-bg-focus-color);  
+  letter-spacing: 1px;
+  color: var(--dz-input-text-focus-color) !important;
+}
+
+
+.form-check-input
+{
+  border: 1px solid var(--dz-input-border-color) !important;
+  background: var(--dz-input-bg-color);
+}
+
+.form-check-input:focus
+{
+  border: 1px solid var(--dz-input-border-color) !important;
+  box-shadow: none;
+}
+
+.btn-primary {
+    background-color: var(--dz-input-bg-color) !important;
+    border: none;
+    color:var(--dz-input-text-color);
+}
+
+.btn-primary:hover,.btn-primary:focus {
+    box-shadow: none;
+    border: none ;
+    color:var(--dz-input-text-focus-color);
+}    
+
+.btn-primary:hover {
+  background: #363e4b !important;
+}
+
+.bn {
+    text-decoration: underline
+}
+
+.bn:hover {
+    cursor: pointer;
+}
