@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sidebar Menu</title>
-  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/bootstrap-5.1.3/css/bootstrap.min.css">
   <link type="text/css" rel="stylesheet" href="assets/jsgrid-1.5.3/jsgrid.min.css" />
   <link type="text/css" rel="stylesheet" href="assets/jsgrid-1.5.3/jsgrid-theme.min.css" />
-  <link rel="stylesheet" href="assets/style/style.css">  
+  <link rel="stylesheet" href="assets/style/style.css">
 </head>
 
 <body class="dark-layout">
@@ -18,40 +18,40 @@
   <header class="dz__header">
     <div class="dz__header__container">
       <span class="shrink-btn">
-          <i class="bx bx-menu"></i>
+        <i class="bi bi-list"></i>
       </span>
-      <div class="dz__header__group_right"> 
-          <img src="assets/images/profile_img_2.png" alt="" class="dz__header__img">
-          <div class="dz__header__theme_selector dark-layout px-2" id="theme-selector"> 
-               <i class='bx bxs-moon'></i>
-          </div>  
+      <div class="dz__header__group_right">
+        <img src="assets/images/profile_img_2.png" alt="" class="dz__header__img">
+        <div class="dz__header__theme_selector dark-layout px-2" id="theme-selector">
+          <i class='bx bi bi-moon-fill'></i>
+        </div>
       </div>
       <span class="dz__header__toggle" id="dz-header-toggle">
-          <i class="bx bx-menu"></i>
+        <i class="bi bi-list"></i>
       </span>
-  </div>
+    </div>
   </header>
 
   <nav id="dzNavBar">
     <div class="sidebar-top">
       <img src="assets/images/DZ-logos_white.png" class="logo" id="dzIcon" alt="">
       <h3 class="dz__sidebar__title">DZ LMS</h3>
-  </div>
+    </div>
 
     <div>
       <div class="dz__nav__list">
         <dv class="dz__nav__items">
           <h3 class="dz__nav__subtitle">Profile</h3>
           <a href="#" class="dz__nav__link">
-            <i class="bx bx-home dz__nav__icon"></i>
+            <i class="bi bi-house-door dz__nav__icon"></i>
             <span class="dz__nav__name">Home</span>
           </a>
 
           <div class="dz__nav__dropdown">
             <a href="#" class="dz__nav__link dz__nav__link_dd">
-              <i class="bx bx-user dz__nav__icon"></i>
+              <i class=" bi-menu-up dz__nav__icon"></i>
               <span class="dz__nav__name">Dropdown</span>
-              <i class="bx bx-chevron-right dz__nav__dropdown-icon"></i>
+              <i class="bi bi-caret-right dz__nav__dropdown-icon"></i>
             </a>
             <div class="dz__nav__dropdown-collapse">
               <div class="dz__nav__dropdown-content">
@@ -65,7 +65,7 @@
           </div>
 
           <a href="#" class="dz__nav__link">
-            <i class="bx bx-message-rounded dz__nav__icon"></i>
+            <i class="bi bi-chat dz__nav__icon"></i>
             <span class="dz__nav__name">Messages</span>
           </a>
         </dv>
@@ -73,11 +73,11 @@
           <h3 class="dz__nav__subtitle">Menu</h3>
 
           <a href="#" class="dz__nav__link">
-            <i class="bx bx-compass dz__nav__icon"></i>
+            <i class="bi-rocket-takeoff dz__nav__icon"></i>
             <span class="dz__nav__name">Explore</span>
           </a>
           <a href="#" class="dz__nav__link">
-            <i class="bx bx-bookmark dz__nav__icon"></i>
+            <i class="bi-bookmark-check dz__nav__icon"></i>
             <span class="dz__nav__name">Saved</span>
           </a>
         </dv>
@@ -95,74 +95,74 @@
 
   <main class="dz__main">
     <div class="container-fluid my-2">
-     <h2>Dashboard</h2>
-    <div class="row">
+      <h2>Dashboard</h2>
+      <div class="row">
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card card-custom border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Available Books</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">1450</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="bx bxs-book-open bx-lg text-gray-300"></i>
-                        </div>
-                    </div>
+          <div class="card card-custom border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Available Books</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">1450</div>
                 </div>
+                <div class="col-auto">
+                  <i class="bx bxs-book-open bx-lg text-gray-300"></i>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card card-custom border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Issued Books</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">58</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="bx bxs-book-add bx-lg text-gray-300"></i>
-                        </div>
-                    </div>
+          <div class="card card-custom border-left-success shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Issued Books</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">58</div>
                 </div>
+                <div class="col-auto">
+                  <i class="bx bxs-book-add bx-lg text-gray-300"></i>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card card-custom border-left-info shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Returned Books</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">25</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="bx bxs-book bx-lg text-gray-300"></i>
-                        </div>
-                    </div>
+          <div class="card card-custom border-left-info shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Returned Books</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">25</div>
                 </div>
+                <div class="col-auto">
+                  <i class="bx bxs-book bx-lg text-gray-300"></i>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card card-custom border-left-warning shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Members</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">450</div>
-                        </div>
-                        <div class="col-auto">
-                            <i class="bx bxs-user-account bx-lg text-gray-300"></i>
-                        </div>
-                    </div>
+          <div class="card card-custom border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+              <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                  <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                    Members</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">450</div>
                 </div>
+                <div class="col-auto">
+                  <i class="bx bxs-user-account bx-lg text-gray-300"></i>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-      <div class="card card-custom">        
+      </div>
+      <div class="card card-custom">
         <div class="card-body">
           <div class="row">
             <div class="col-sm-12 col-lg-12 col-xs-12">
@@ -181,7 +181,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="assets/jsgrid-1.5.3/jsgrid.min.js"></script>
   <script src="assets/script/jsgrid-example.js"></script>
-  <script src="assets/bootstrap-5.1.3/js/bootstrap.min.js"></script>  
+  <script src="assets/bootstrap-5.1.3/js/bootstrap.min.js"></script>
 </body>
 
 </html>

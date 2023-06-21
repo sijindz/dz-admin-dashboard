@@ -4,8 +4,8 @@ const theme_selector = document.getElementById("theme-selector");
 const dzNavBar = document.getElementById("dzNavBar")
 
 const themes = {
-    "light": { "name": "theme_light", "icon": "DZ-logos_black.png","selectorIcon":"bx bxs-sun" },
-    "dark": { "name": "theme_dark", "icon": "DZ-logos_white.png","selectorIcon":"bx bxs-moon" }
+    "light": { "name": "theme_light", "icon": "DZ-logos_black.png","selectorIcon":"bi bi-sun-fill" },
+    "dark": { "name": "theme_dark", "icon": "DZ-logos_white.png","selectorIcon":"bi bi-moon-fill" }
 };
 const DEFAULT_THEME="dark";
 

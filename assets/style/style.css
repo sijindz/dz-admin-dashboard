@@ -13,7 +13,8 @@
     --main-color-light: #32383e;
     --text-color: #3F4254;
 
-    --navbar-content-left-padding: 1.5rem;
+    --navbar-content-left-padding: 1rem;
+    --sidebar-max-width:20rem;
 
     /* new */
     --dz-header-height: 3.5rem;
@@ -48,9 +49,6 @@
     --z-fixed: 99999;
 
 
-
-
-
     /* light theme */
     --dz-sidebar-bg-color-light: rgb(245 245 245);
     --dz-sidebar-bg-color: #fff;
@@ -59,11 +57,11 @@
     --dz-sidebar-text-color-light: #666666;
     --dz-sidebar-text-color-lighter: #999999;
     --dz-sidebar-text-color: #6e768e;
-    --dz-sidebar-text-highlight: #71b6f9;
+    --dz-sidebar-text-highlight: #000;
 
 
-    --dz-sidebar-icon-color: #333333;
-    --dz-sidebar-icon-highlight: #71b6f9;
+    --dz-sidebar-icon-color: #6e768e;
+    --dz-sidebar-icon-highlight: #000;
 
     --dz-container-color: #f0f0f5;
     --dz-card-color: #fff;
@@ -150,7 +148,7 @@ nav {
     left: -100%;
     height: 100vh;
     background-color: var(--dz-sidebar-bg-color);
-    width: 16rem;
+    width: var(--sidebar-max-width);
     /* color: rgb(207, 0, 0); */
     display: flex;
     flex-direction: column;
@@ -205,7 +203,7 @@ main h1 {
 .sidebar-top h3 {
     padding-left: 0.5rem;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--dz-sidebar-text-color);
     margin-bottom: 0px;
     white-space: nowrap;
@@ -255,7 +253,7 @@ body.shrink .sidebar-top h3 {
 }
 
 .admin-user a {
-    margin: 0 0.4rem 0.4rem var(--navbar-content-left-padding);
+    margin: 3rem 0.5rem 0.4rem var(--navbar-content-left-padding);
 }
 
 .log-out {
@@ -268,7 +266,6 @@ body.shrink .sidebar-top h3 {
     justify-content: center;
     font-size: 1.15rem;
     border-radius: 10px;
-    margin: 0 0.65rem;
     transition: color 0.3s;
 }
 
@@ -361,11 +358,11 @@ body.shrink .sidebar-top h3 {
 
     main {
         margin-top: calc(var(--dz-header-height) + 0.5rem);
-        padding-left: 16rem;
+        padding-left: var(--sidebar-max-width);
     }
 
     .dz__header {
-        padding: 0 1rem 0 16rem;
+        padding: 0 1rem 0 var(--sidebar-max-width);
     }
 
     .dz__header__container {
@@ -397,7 +394,7 @@ body.shrink .sidebar-top h3 {
     nav {
         position: fixed;
         left: 0;
-        width: 16rem;
+        width: var(--sidebar-max-width);
     }
 
     .shrink-btn {
@@ -413,13 +410,18 @@ body.shrink .sidebar-top h3 {
 
     /* Begin mouse hover */
     body.shrink nav:hover {
-        width: 16rem !important;
+        width: var(--sidebar-max-width) !important;
         position: fixed !important;
         transition: .3s;
     }
 
     body.shrink main {
-        padding-left: 5.4rem !important;
+        padding-left: 5rem !important;
+    }
+
+    body.shrink nav:not(:hover) .dz__nav__link.active,body.shrink nav:not(:hover) .dz__nav__link
+    {
+        background-color:var(--dz-sidebar-bg-color) !important;
     }
 
     body.shrink nav:hover .hide {
@@ -524,11 +526,13 @@ body.shrink .sidebar-top h3 {
 }
 
 .dz__nav__list {
-    row-gap: 2.5rem;
+    row-gap: 1rem;
 }
 
 .dz__nav__items {
-    row-gap: 0rem
+    row-gap: .5rem;
+    padding-left: var(--navbar-content-left-padding);
+    padding-right: 1rem;
 }
 
 .dz__nav__subtitle {
@@ -536,7 +540,8 @@ body.shrink .sidebar-top h3 {
     text-transform: uppercase;
     letter-spacing: .1rem;
     color: var(--dz-sidebar-text-color-lighter);
-    padding: 9px var(--navbar-content-left-padding);
+    /* padding: 9px var(--navbar-content-left-padding); */
+    padding: 9px 0;
     font-weight: 500;
 }
 
@@ -544,17 +549,31 @@ body.shrink .sidebar-top h3 {
     display: flex;
     align-items: center;
     color: var(--dz-text-color);
-    padding: 9px 2px 9px var(--navbar-content-left-padding);
+    /* padding: 9px 2px 9px var(--navbar-content-left-padding); */
+    padding: 9px 2px 9px 5px;
+    border-radius: 4px;
 }
 
-.dz__nav__link:hover {
+/* .dz__nav__link.active {
+border-left: 4px solid var(--dz-sidebar-text-highlight);
+} */
+
+.dz__nav__link.active .dz__nav__name{
+    color: var(--dz-sidebar-text-highlight);
+}
+
+.dz__nav__link.active .dz__nav__icon{
+    color: var(--dz-sidebar-icon-highlight);
+}
+
+.dz__nav__link:hover,.dz__nav__link.active {
     background-color: var(--dz-sidebar-bg-color-light);
 }
 
 .dz__nav__icon {
-    font-size: 18px;
+    font-size: 1.3rem;
     margin-right: .8rem;
-    background: var(--dz-sidebar-bg-color-light);
+    /* background: var(--dz-sidebar-bg-color-light); */
     min-width: 30px;
     width: 30px;
     height: 30px;
@@ -563,6 +582,7 @@ body.shrink .sidebar-top h3 {
     align-items: center;
     justify-content: center;
     color: var(--dz-sidebar-icon-color);
+    font-weight: 00;
 }
 
 .dz__nav__link:hover .dz__nav__icon {
@@ -570,8 +590,8 @@ body.shrink .sidebar-top h3 {
 }
 
 .dz__nav__name {
-    font-size: .95rem;
-    font-weight: 500 !important;
+    font-size: 1rem;
+    font-weight: 600 !important;
     white-space: nowrap;
     color: var(--dz-sidebar-text-color);
     letter-spacing: .5px;
@@ -587,13 +607,14 @@ body.shrink .sidebar-top h3 {
 
 .dz__nav__dropdown {
     transition: .4s ease-in-out;
+    border-radius: 4px;
+    min-width: 18rem;
 }
 
 .dz__nav__dropdown-collapse {
     display: none;
     background-color: var(--dz-sidebar-bg-color-light);
-    border-left: 4px solid var(--dz-sidebar-text-highlight);
-    /* max-width: 16rem; */
+    border-left: 4px solid var(--dz-sidebar-text-color-lighter);
 }
 
 .dz__nav__dropdown-content {
@@ -619,16 +640,13 @@ body.shrink .sidebar-top h3 {
     padding: 4px 0px;
     font-size: var(--dz-normal-font-size);
     color: var(--dz-sidebar-text-color-light);
+    border-radius: 4px;
 }
 
 .dz__nav__dropdown-item:hover {
     color: var(--dz-sidebar-text-highlight);
 }
 .dz__nav__dropdown-item.active{
-    color: var(--dz-sidebar-text-highlight);
-}
-
-.dz__nav__link.active .dz__nav__name{
     color: var(--dz-sidebar-text-highlight);
 }
 
@@ -645,7 +663,6 @@ body.shrink .sidebar-top h3 {
     font-weight: 800;
 }
 
-
 /* Rotate icon arrow */
 .dz__nav__dropdown.nav__dropdown-active .dz__nav__dropdown-icon {
     transform: rotate(90deg);
@@ -656,6 +673,7 @@ body.shrink .sidebar-top h3 {
     /* to prevent dopdown down arrow hide issue */
     /* max-width: 16rem; */
 }
+
 
 /*PAGE LOADING ANIMATION*/
 
